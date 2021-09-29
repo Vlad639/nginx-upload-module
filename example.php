@@ -1,13 +1,12 @@
-<?php
-$header_prefix = 'file';
-$slots = 6;
-?>
 <html>
 <head>
 <title>Test upload</title>
 </head>
 <body>
-<?
+
+<?php
+$header_prefix = 'file';
+$slots = 6;
 if ($_POST){
     echo "<h2>Uploaded files:</h2>";
     echo "<table border=\"2\" cellpadding=\"2\">";
@@ -29,7 +28,9 @@ if ($_POST){
 
     echo "</table>";
 
-}else{?>
+}
+?>
+
 <h2>Select files to upload</h2>
 <form name="upload" method="POST" enctype="multipart/form-data" action="/upload">
 <input type="file" name="file1"><br>
@@ -41,7 +42,7 @@ if ($_POST){
 <input type="submit" name="submit" value="Upload">
 <input type="hidden" name="test" value="value">
 </form>
-<?}
-?>
+
+
 </body>
 </html>
